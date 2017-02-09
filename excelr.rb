@@ -10,7 +10,18 @@ task = 'concatenate'
 order = 'rows'
 separator = ','
 
-book = Spreadsheet.open book_path
+file_path = 'Sample.xls'
+target_name = 'out.xls'
+task = 'concatenate'
+direction = 'rows'
+row_from = 1
+row_to = 10
+col_from = 0
+col_to = 10
+target_element = 11
+separator = ','
+
+book = Spreadsheet.open file_path
 
 # # We can either access all the worksheets in a workbook...
 # book.worksheets
@@ -35,4 +46,4 @@ book = Spreadsheet.open book_path
 # 
 # row.format 2
 
-book.write 'out.xls'
+book.write target_name
